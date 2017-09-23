@@ -9,8 +9,9 @@ var db = require("../models/");
 //create routes
 
 //the get route, to get all burgers from database
+console.log(Object.keys(db));
 router.get("/", function(req, res){
-    db.Burger.findAll()
+    db.burgers.findAll()
         .then(function(dbBurger) {
             console.log(dbBurger);
             
