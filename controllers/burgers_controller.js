@@ -25,7 +25,7 @@ router.get("/", function(req, res){
 
 //the post route for create burger
 router.post("/createburgers", function(req, res){
-    db.Burger.create({
+    db.burgers.create({
         burger_name: req.body.burger_name
     })
     .then(function(dbBurger){
@@ -36,7 +36,7 @@ router.post("/createburgers", function(req, res){
 
 //the put route for devour burgers
 router.put("/devouredburger", function(req, res){
-    db.Burger.update({
+    db.burgers.update({
         devoured: true
     }, 
         {
